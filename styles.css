@@ -153,7 +153,7 @@ nav {
 
 /* About Section */
 .about {
-    padding: 50px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -170,43 +170,61 @@ nav {
     font-size: 18px;
 }
 
-/* Projects Section */
-.projects {
+/* Skills Section */
+.skills {
     padding: 50px;
+    text-align: center;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
+.skills h2 {
+    color: var(--primary-color);
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 40px;
 }
 
-.project-card {
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-tag {
     background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.project-info {
-    padding: 20px;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .skills-container {
+        padding: 0 20px;
+    }
 }
 
-.project-title {
-    font-size: 18px;
-    margin-bottom: 5px;
+/* Responsive Design for Skills */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.project-tech {
-    color: #888;
-    margin-bottom: 15px;
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-button {
